@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせフォームサンプル</title>
+    <style>
+        h1{
+            color: blueviolet;
+            text-align: center;
+        }
+        .form{
+            max-width: 720px;
+            background-color: rgb(224, 220, 153);
+            margin: 0 auto;
+        }
+        .form-item{
+            display: flex;
+            align-items: center;
+            border-top: 1px solid blueviolet;
+        }
+        .form-item:nth-child(6){
+            border-bottom: 1px solid blueviolet;
+        }
+        .form-item-label{
+            width: 100%;
+            max-width: 248px;
+        }
+    </style>
+</head>
+<body>
+    <h1>お問い合わせフォームサンプル</h1>
+    <form action="#" method="post">
+        <div class="form">
+            <div class="form-item">
+                <p class="form-item-label"><span class="form-item-label-required">必須</span>氏名</p>
+                <input type="text" name="name" class="form-item-input" placeholder="例）電子太郎" required>
+            </div>
+            <div class="form-item">
+                <p class="form-item-label"><span class="form-item-label-required form-btn-free ">任意</span>電話番号</p>
+                <input type="text" name="tel" class="form-item-input" placeholder="例）000-0000-0000">
+            </div>
+            <div class="form-item">
+                <p class="form-item-label"><span class="form-item-label-required">必須</span>メールアドレス</p>
+                <input type="email" name="mail" class="form-item-input" placeholder="例）example@abc.com" required>
+            </div>
+            <div class="form-item">
+                <p class="form-item-label ismsg"><span class="form-item-label-required">必須</span>お問い合わせ内容</p>
+                <textarea class="form-item-textarea" name="inquiry" required></textarea>
+            </div>
+            <div class="form-item">
+                <p class="form-item-label"><span class="form-item-label-required form-btn-free">任意</span>興味があるもの</p>
+                <input type="checkbox" id="HTML" name="interest" value="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="css" name="interest" value="css">
+                <label for="css">css</label>
+                <input type="checkbox" id="JavaScript" name="interest" value="JavaScript">
+                <label for="JavaScript">JavaScript</label>
+            </div>
+            <div class="form-item">
+                <p class="form-item-label"><span class="form-item-label-required">必須</span>お知らせメール</p>
+                <label> <input type="radio" name="ml" value="送信してもよい" checked required>送信してもよい</label>
+                <label> <input type="radio" name="ml" value="送信しない"> 送信しない</label>
+            </div> <input type="submit" class="form-btn" value="送信する">
+        </div>
+    </form>
+</body>
+</html>
